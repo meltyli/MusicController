@@ -15,7 +15,7 @@
 	<mp:PhoneIdentity PhoneProductId="e52e539f-8d8b-4979-889c-a2b75bec88d5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
 	<Properties>
-		<DisplayName>WidgetTemplate</DisplayName>
+		<DisplayName>MusicController</DisplayName>
 		<PublisherDisplayName>melty</PublisherDisplayName>
 		<Logo>Assets\StoreLogo.png</Logo>
 	</Properties>
@@ -31,12 +31,12 @@
 	<Applications>
 		<Application Id="App"
 		  Executable="$targetnametoken$.exe"
-		  EntryPoint="WidgetTemplate.App">
+		  EntryPoint="MusicController.App">
 			<uap:VisualElements
-			  DisplayName="WidgetTemplate"
+			  DisplayName="MusicController"
 			  Square150x150Logo="Assets\Square150x150Logo.png"
 			  Square44x44Logo="Assets\Square44x44Logo.png"
-			  Description="WidgetTemplate desc."
+			  Description="MusicController desc."
 			  BackgroundColor="transparent">
 				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
