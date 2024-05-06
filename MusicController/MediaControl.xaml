@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="MusicController.Widget1"
+    x:Class="MusicController.MediaControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MusicController"
@@ -12,7 +12,7 @@
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
         Orientation="Vertical">
-        <TextBlock Padding="0,0,0,5" Text="Widget1" />
+        <TextBlock Padding="0,0,0,5" Text="MediaControl" />
         <Button x:Name="myButton" Click="MyButton_Click">Click Me</Button>
     </StackPanel>
 </Page>

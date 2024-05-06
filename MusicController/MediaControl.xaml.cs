@@ -20,9 +20,9 @@ namespace MusicController
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Widget1 : Page
+    public sealed partial class MediaControl : Page
     {
-        public Widget1()
+        public MediaControl()
         {
             this.InitializeComponent();
         }

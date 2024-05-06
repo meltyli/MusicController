@@ -48,7 +48,7 @@
 				<!-- widget window settings -->
 				<uap3:Extension Category="windows.appExtension">
 					<uap3:AppExtension Name="microsoft.gameBarUIExtension"
-									   Id="Widget1"
+									   Id="MediaControl"
 									   DisplayName="Widget Display Name"
 									   Description="Widget Description"
 									   PublicFolder="WidgetAssets">

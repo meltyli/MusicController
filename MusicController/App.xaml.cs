@@ -23,7 +23,7 @@ namespace MusicController
     /// </summary>
     sealed partial class App : Application
     {
-        private XboxGameBarWidget widget1 = null;
+        private XboxGameBarWidget mediaControl = null;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -35,10 +35,10 @@ namespace MusicController
             this.Suspending += OnSuspending;
         }
 
-        private void Widget1Window_Closed(object sender, Windows.UI.Core.CoreWindowEventArgs e)
+        private void MediaControlWindow_Closed(object sender, Windows.UI.Core.CoreWindowEventArgs e)
         {
-            widget1 = null;
-            Window.Current.Closed -= Widget1Window_Closed;
+            mediaControl = null;
+            Window.Current.Closed -= MediaControlWindow_Closed;
         }
 
         protected override void OnActivated(IActivatedEventArgs args)
@@ -61,12 +61,12 @@ namespace MusicController
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 Window.Current.Content = rootFrame;
 
-                if (widgetArgs.AppExtensionId == "Widget1")
+                if (widgetArgs.AppExtensionId == "MediaControl")
                 {
-                    widget1 = new XboxGameBarWidget(widgetArgs, Window.Current.CoreWindow, rootFrame);
-                    rootFrame.Navigate(typeof(Widget1), widget1);
+                    mediaControl = new XboxGameBarWidget(widgetArgs, Window.Current.CoreWindow, rootFrame);
+                    rootFrame.Navigate(typeof(MediaControl), mediaControl);
 
-                    Window.Current.Closed += Widget1Window_Closed;
+                    Window.Current.Closed += MediaControlWindow_Closed;
                 }
                 else
                     return; // Unknown - Game Bar should never send an unknown App Extension ID
@@ -109,7 +109,7 @@ namespace MusicController
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(Widget1), e.Arguments);
+                    rootFrame.Navigate(typeof(MediaControl), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
